@@ -1,0 +1,316 @@
+/* 09-07-2023 */
+/* CODED BY "MATIN MARZIE" */
+
+/* || RESET */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+/* || variables */
+:root {
+  /* FONT: */
+  --FONT-SIZE: clamp(1rem, 2.2vh, 1.5rem);
+  --FONT-FAMILY: Arial, Helvetica, sans-serif;
+
+  /* COLORS: */
+  --BGCOLOR: rgb(247, 165, 42);
+  --BGCOLOR-FADE: rgb(250, 213, 157);
+  --COLOR: whitesmoke;
+  --BODY-BGCOLOR: #fff;
+  --BODY-COLOR: #000;
+  --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
+  --HEADER-BGCOLOR: #333;
+  --HEADER-COLOR: #fff;
+  --HEADER-LINK-COLOR: #333;
+  --NAV-BGCOLOR: whitesmoke;
+  --LINK-COLOR: blue;
+  --H2-COLOR: rgb(181, 123, 36);
+
+  /* BORDERS: */
+  --BORDER-COLOR: #000;
+  --BORDERS: 2px solid VAR(--BORDER-COLOR);
+
+  /* PADDING: */
+  --HEADER-TB-PADDING: 0.2em;
+  --NAV-TB-PADDING: 0.2em;
+  --MAIN-TB-PADDING: 0.25em;
+  --MAIN-SIDE-PADDING: 2.5%;
+  --MENU-TB-PADDING: 2em;
+  --MENU-SIDE-PADDING: 2.5%;
+
+  /* MARGIN: */
+  --MARGIN: clamp(1em, 2.5vh, 1.5em);
+}
+
+/* dark mode theme */
+@media (preferes-color-scheme: dark) {
+  :root {
+    --BGCOLOR: #000;
+  }
+}
+
+/* || UTILITY CLASSES */
+.nowrap {
+  white-space: nowrap;
+}
+
+.offscreen {
+  position: absolute;
+  left: -10000;
+}
+
+.center {
+  text-align: center;
+}
+
+/* || GENERAL STYLES */
+
+html {
+  scroll-behavior: smooth;
+  font-size: var(--FONT-SIZE);
+  font-family: var(--FONT-FAMILY);
+  background-color: var(--BGCOLOR);
+  color: var(--COLOR);
+  background-image: var(--BGIMAGE);
+}
+
+body {
+  background-color: var(--BODY-BGCOLOR);
+  color: var(--BODY-COLOR);
+  min-height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  border-left: 2px solid var(--BORDER-COLOR);
+  border-right: 2px solid var(--BORDER-COLOR);
+  box-shadow: 0 0 10px 0 black;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  text-align: right;
+  padding: 1rem 1rem;
+  background-color: #333;
+  color: var(--H2-COLOR);
+  font-weight: bolder;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+a:any-link {
+  text-decoration: none;
+  color: var(--LINK-COLOR);
+}
+
+/* || HEADER */
+
+.header {
+  background-color: var(--HEADER-BGCOLOR);
+  position: sticky;
+  top: 0;
+  border-bottom: var(--BORDERS);
+  box-shadow: 0 0 10px #000;
+  z-index: 1;
+  padding: 0.5rem 0.2rem;
+}
+.header__h1 {
+  color: var(--HEADER-COLOR);
+  text-align: center;
+  padding: var(--HEADER-TB-PADDING);
+}
+
+.header__nav {
+  background-color: var(--NAV-BGCOLOR);
+}
+
+.header__ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.header__ul li {
+  flex: 1;
+}
+
+.header__ul li a {
+  display: block;
+  text-align: center;
+  padding: var(--NAV-TB-PADDING);
+}
+
+.header a {
+  color: VAR(--HEADER-LINK-COLOR);
+}
+
+header a:hover {
+  background-color: #4a4a4a;
+  color: #fff;
+}
+
+/* || HERO */
+
+.hero {
+  position: relative;
+}
+
+.hero__animation {
+  position: absolute;
+  top: -300px;
+  left: 5px;
+  animation: glutenFreeAnimation 1s ease-in-out 1s 1 normal forwards running;
+}
+
+@keyframes glutenFreeAnimation {
+  0% {
+    top: -20px;
+  }
+  80% {
+    top: 2px;
+  }
+
+  100% {
+    top: 0;
+    left: 5px;
+  }
+}
+
+/* || FOOTER */
+
+footer {
+  background-color: var(--HEADER-BGCOLOR);
+  color: var(--HEADER-COLOR);
+  text-align: center;
+  position: sticky;
+  bottom: 0px;
+}
+
+/* || MAIN */
+
+.main {
+  padding: var(--MAIN-TB-PADDING) var(--MAIN-SIDE-PADDING);
+}
+
+.main__article {
+  margin: var(--MARGIN);
+}
+
+.main__article:last-child {
+  min-height: calc(100vh - 20rem);
+}
+
+/* || MENU */
+
+.menu__container {
+  text-align: left;
+}
+
+.menu__container th,
+.menu__container td,
+.menu__container tr {
+  border: 2px solid #333;
+}
+
+.menu__container th {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.menu__container td {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.menu__container th:first-child {
+  text-align: left;
+  padding: 1rem;
+}
+
+.menu__container thead th:first-child {
+  border-top-left-radius: 15px;
+}
+.menu__container thead th:last-child {
+  border-top-right-radius: 15px;
+}
+
+.menu__container tr:nth-last-child(3) th {
+  border-bottom-left-radius: 15px;
+}
+
+.menu__container tr:last-child td:last-child {
+  border-bottom-right-radius: 15px;
+}
+
+.menu__container a {
+  color: black;
+  text-decoration: underline;
+}
+
+/* || CONTACT */
+
+.contact__fieldset {
+  border: none;
+}
+
+.contact__label {
+  display: block;
+  font-weight: bold;
+  text-align: left;
+}
+.contact__input,
+.contact__textarea {
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.contact__button {
+  width: 50%;
+  background-color: var(--HEADER-COLOR);
+  padding: 0.5rem;
+  margin-bottom: 0.2rem;
+  BACKGROUND-color: VAR(--H2-COLOR);
+  font-weight: bold;
+}
+
+.contact__button:hover {
+  background-color:rgb(211, 161, 85);
+}
+
+/* || MEDIA QUERIES */
+
+@media screen and (max-width: 576px) {
+  .hero__animation {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .hero__animation {
+    width: 80px;
+    height: 80px;
+  }
+
+  .main {
+    padding: 0;
+  }
+}

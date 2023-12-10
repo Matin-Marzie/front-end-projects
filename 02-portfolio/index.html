@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portofolio</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="img/icon.svg">
+    <script src="https://kit.fontawesome.com/d2b5825bd7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="header__nav">
+                <h2><span class="red">M</span>atin.</h2>
+                <nav class="header__nav--links">
+                    <ul class="side-menu" id="side-menu">
+                        <div class="x-mark" id="x-mark"><i class="fa-solid fa-xmark" style="color: #ffffff;" onclick="closeMenu()"></i></div>
+                        <li><a class="close-menu" href="#">Home</a></li>
+                        <li><a class="close-menu" href="#about">About</a></li>
+                        <!-- <li><a class="close-menu" href="#persian">Persian Lessons</a></li> -->
+                        <li><a class="close-menu" href="#my-services">Services</a></li>
+                        <li><a class="close-menu" href="#portfolio">Portofolio</a></li>
+                        <li><a class="close-menu" href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="menu">
+                    <i class="fa-solid fa-bars menu-btn" id="menu-btn" style="color: #ffffff; " onclick="openMenu()"></i>
+                </div>
+            </div>
+            <section class="header-text">
+                <p>
+                    Front-end programmer<br>
+                </p>
+                <h1 class="header-text__h1">Hi, I'm <span class="red">Matin</span> Marzie</h1>
+            </section>
+        </div>
+    </header>
+
+
+    <main class="main">
+
+        <!-- ----------Persian---------- -->
+        <!-- <section class="persian-section" id="persian">
+            <div class="persian-container">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit maxime sunt tenetur consectetur ab placeat sit mollitia perferendis, illo aspernatur. Quisquam nesciunt dignissimos error earum neque ullam in doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. At mollitia, saepe quae officia numquam voluptatem aut molestias nostrum voluptatibus eveniet, explicabo libero fugit distinctio quis laudantium voluptates possimus minima provident</p>
+            </div>
+        </section> -->
+
+        <!-- ----------ABOUT---------- -->
+        <section class="about-section" id="about">
+            <div class="about-container">
+                <div class="about-row">
+                    <div class="about-col-1">
+                        <img src="img/prof-pic-removebg-preview.png" alt="a picture of Matin">
+                    </div>
+                    <div class="about-col-2">
+                        <h2 class="sub-title">About me</h2>
+                        <p>
+                            I am a determined and resilient individual who embarked on a journey of growth and learning
+                            at a young age. Born in Iran, I made a significant transition in my life by moving to Greece
+                            as a refugee when I was just 14 years old in 2018. This experience has shaped my
+                            perspective, instilled perseverance, and kindled a strong desire to excel.<span
+                                class="read-more-link" id="read-more" onclick="readMore('read-more-content')"><span class="nowrap">read
+                                more...</span></span>
+                            <span class="hide" id="read-more-content">
+                                <br>
+                                <br>
+                                During my high school years in Greece, I dedicated myself to learning the Greek language
+                                and culture. I successfully passed the rigorous Greek exams (πανελλήνιες), showcasing my
+                                commitment to adaptation and continuous self-improvement.
+                                <br>
+                                <br>
+                                Currently, I am a dedicated student at the Department of Informatics at Ionio University
+                                of Kerkyra, entering my second year of studies next month. The field of informatics has
+                                captured my fascination due to its dynamic nature and limitless potential for
+                                innovation. My academic journey has not only expanded my knowledge but also nurtured my
+                                problem-solving skills and analytical thinking.</span>
+                            <span class="show-less hide nowrap" id="show-less"
+                                onclick="ShowLess(); opentab('skills'); AddActiveLink('skills-link')">show less</span>
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" id="skills-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links " onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links " onclick="opentab('education')">Education</p>
+                            <p class="tab-links " onclick="opentab('languages')">Languages</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Front-end Development</span><br>Proven ability in creating <b>responsive</b>
+                                    and visually appealing interfaces<br>HTML/CSS, Bootstrap, Js, React, github/git</li>
+                                <li><span>Python</span><br>worked a lot with libraries:<br>tkinter, Socket, subproccess,
+                                    os, threading and time</li>
+                                <li><span>C/C++</span><br>made small projects</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents " id="experience">
+                            <ul>
+                                <li><span>2022-</span><br>While I may not have formal professional experience, I have
+                                    undertaken personal projects that have allowed me to develop and demonstrate my
+                                    skills in front-end development. These projects have provided me with hands-on
+                                    experience in creating user-friendly interfaces and have deepened my understanding
+                                    of web development concepts.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Computer Science Student</span><br>Ionio University of Kerkyra,
+                                    Greece<br>Currently entering the second year of the program</li>
+                                <li><span>High school</span><br>9o lykeio athinon - 9ο λύκειο Αθηνών</li>
+                                <li><span>gymnasium</span><br>studied in Iran </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="languages">
+                            <ul>
+                                <li><span>English</span><br>B2</li>
+                                <li><span>Greek</span><br>Fluent</li>
+                                <li><span>Persian</span><br>Fluent</li>
+                                <li><span>Turkish</span><br>Spoken (Cannot write)</li>
+                                <li><span>Turkmen</span><br>Spoken (Cannot write)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ----------MY-SERVICES---------- -->
+        <section class="my-services-section" id="my-services">
+            <div class="my-services-container">
+                <h2 class="sub-title">My Services</h2>
+                <div class="services-list">
+                    <div class="services-item">
+                        <i class="fa-solid fa-code services-logo" style="color: #ffffff;"></i>
+                        <h3>Front end Development</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero beatae iusto quisquam amet
+                            voluptate suscipit doloribus numquam, et in, cupiditate.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div class="services-item">
+                        <i class="fa-solid fa-pen-nib services-logo"></i>
+                        <h3>UI/UX Design</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero beatae iusto quisquam amet
+                            voluptate suscipit doloribus numquam, et in, cupiditate.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div class="services-item">
+                        <i class="fa-brands fa-app-store services-logo" style="color: #ffffff;"></i>
+                        <h3>App Design</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero beatae iusto quisquam amet
+                            voluptate suscipit doloribus numquam, et in, cupiditate.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ----------MY-WORK---------- -->
+        <section class="portfolio-section" id="portfolio">
+            <div class="portfolio-container">
+                <h2 class="sub-title">My Work</h2>
+                <div class="work-list">
+                    <div class="work-list-item">
+                        <img src="img/679140.png" alt="A picture of a computer with lot of eddited effects">
+                        <div class="layer">
+                            <h3>Python project</h3>
+                            <p>An application that gives you the ability of taking access of an other computer!</p>
+                            <a href="https://github.com/Matin-Marzie/Remote-access"><i class="fa-solid fa-link"
+                                    style="color: #ff0051;"></i></a>
+                        </div>
+                    </div>
+                    <div class="work-list-item">
+                        <img src="img/work-1.jpg" alt="A picture of a computer with lot of eddited effects">
+                        <div class="layer">
+                            <h3>Python project</h3>
+                            <p>An application that gives you the ability of taking access of an other computer!</p>
+                            <a href="https://github.com/Matin-Marzie/Remote-access"><i class="fa-solid fa-link"
+                                    style="color: #ff0051;"></i></a>
+                        </div>
+                    </div>
+                    <div class="work-list-item">
+                        <img src="img/work-1.jpg" alt="A picture of a computer with lot of eddited effects">
+                        <div class="layer">
+                            <h3>Python project</h3>
+                            <p>An application that gives you the ability of taking access of an other computer!</p>
+                            <a href="https://github.com/Matin-Marzie/Remote-access"><i class="fa-solid fa-link"
+                                    style="color: #ff0051;"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <form action="https://www.github.com/Matin-Marzie">
+                    <div class="center"><button type="submit">See More</button></div>
+                </form>
+            </div>
+        </section>
+
+        <!-- ----------CONTACT---------- -->
+        <section class="contact" id="contact">
+            <div class="contact-container">
+                <div class="contact-row">
+                    <!-- Column 1 -->
+                    <div class="contact-col-1">
+                        <h2 class="sub-title">Contact Me</h2>
+                        <a href="mailto: matin.marzie5148@gmail.com">
+                            <div class="contact-col-1-contact">
+                                <i class="fa-regular fa-envelope" style="color: var(--COLOR);"></i>
+                                <p class="contact-email">matin.marzie5148@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="tel: +306946624646">
+                            <div class="contact-col-1-contact">
+                                <i class="fa-solid fa-phone" style="color: var(--COLOR);"></i>
+                                <p>+30 6946624646</p>
+                            </div>
+                        </a>
+                        <div class="contact-col-1-contact">
+                            <a href="https://www.facebook.com/matin.marzie/"><i class="fa-brands fa-facebook"
+                                    style="color: var(--TEXT-COLOR)"></i></a>
+                            <a href="https://www.instagram.com/matin.marziee"><i class="fa-brands fa-instagram"
+                                    style="color: var(--TEXT-COLOR);"></i></a>
+                            <a href="https://github.com/Matin-Marzie/"><i class="fa-brands fa-github"
+                                    style="color: var(--TEXT-COLOR);"></i></a>
+                            <a href="linkdin.html"><i class="fa-brands fa-linkedin"
+                                    style="color: var(--TEXT-COLOR);"></i></a>
+                        </div>
+                        <div class="contact-col-1-contact-cv">
+                            <a href="assets/CV.txt" download class="btn"><span class="nowrap">Download CV</span></a>
+                        </div>
+                    </div>
+                    <!-- Column 2 -->
+                    <div class="contact-col-2">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" placeholder="Your Name" name="Name" id="Name" autocomplete="on"
+                                required>
+                            <input type="text" placeholder="Your Email" name="Email" id="Email" autocomplete="on"
+                                required>
+                            <textarea name="message" id="message" cols="30" rows="10"
+                                placeholder="Your Message" required></textarea>
+                            <button type="submit" class="btn">Submit</button>
+                        </form>
+                        <p id="msg"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer center">
+        <p>Implemented by &lt;&lt; <span class="nowrap">Mohammad Matin Marzie</span>&gt;&gt; <span
+                class="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;Copyright &copy;</span> GreatStak (Youtube)</p>
+    </footer>
+    <script src="index.js"></script>
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyJUzaRZCqXRQnkz0_-1dxYSgFnHkDizHnnsbQ4Ve4m21y9QvhLHFBiEVOOiFP42egU/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg')
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent seccussfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+
+</html>

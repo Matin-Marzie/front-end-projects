@@ -379,7 +379,7 @@ a {
 .portfolio-section img {
   display: flex;
   width: 550px;
-  height: auto;
+  height: 100%;
   /* border: 2px solid var(--COLOR); */
   border-radius: 2rem;
   transition: transform 2s;
